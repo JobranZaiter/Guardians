@@ -1,0 +1,225 @@
+/* Global Variables */
+:root {
+    --primary-color: #37474F; /* Dark Blue Gray */
+    --secondary-color: #ECEFF1; /* Light Gray */
+    --accent-color: #2196F3; /* Light Blue */
+    --neutral-light: #FFFFFF; /* White */
+    --neutral-dark: #263238; /* Dark Blue Gray */
+  }
+
+/* Resetting Defaults */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar ul li a:hover {
+    color:var(--accent-color);
+}
+
+.navbar .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1;
+    border: 3px black;
+}
+
+.navbar .sub-menu li {
+    display: block;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.navbar .other:hover .sub-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.navbar .other {
+    position: relative;
+}
+
+.image-container{
+    display:flex;
+    position: relative;
+    width:100%;
+    height:700px;
+    
+}
+.image-content {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: none; 
+}
+
+.image-content.active {
+    display: block; 
+}
+
+
+.content {
+    border-radius: 10px;
+    width: 40%;
+    position: absolute;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: var(--neutral-light);
+    background-color: rgba(211,211,211,0.8);
+    
+    
+}
+
+.content h1{
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+.content p{
+    font-size: 25px;
+    margin: 20px auto;
+    font-weight:100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    height: 40px;
+    padding:15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid var(--accent-color);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-text-fill-color: var(--neutral-light);
+}
+.hov{
+    background: var(--accent-color);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    border-radius: 25px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+button:hover .hov{
+    width: 100%;
+}
+button:hover{
+    border:none;
+}
+
+.image-content.active {
+    display: block; 
+}
+
+.navigation-container {
+    height: 5px;
+    border-radius: 20px;
+    width: fit-content;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    margin: 0 auto;
+    background-color: var(--neutral-dark);
+    padding: 10px;
+    
+}
+
+.navigation-container .circle {
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navigation-container .circle.active {
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: var(--accent-color);
+}
+/* Footer section */
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 100px; 
+    height: auto;
+}
+
+.footer-contact-info {
+    text-align: left;
+}
+
+.footer-contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-contact-info p {
+    margin-bottom: 5px;
+}
